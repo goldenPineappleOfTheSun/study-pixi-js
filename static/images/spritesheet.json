@@ -1,0 +1,92 @@
+{"frames": {
+
+"ammo.png":
+{
+	"frame": {"x":0,"y":0,"w":28,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":16},
+	"sourceSize": {"w":28,"h":16}
+},
+"assault rifle.png":
+{
+	"frame": {"x":28,"y":0,"w":45,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":20},
+	"sourceSize": {"w":45,"h":20}
+},
+"bullet.png":
+{
+	"frame": {"x":73,"y":0,"w":4,"h":2},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":4,"h":2},
+	"sourceSize": {"w":4,"h":2}
+},
+"carbine.png":
+{
+	"frame": {"x":0,"y":20,"w":62,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":62,"h":15},
+	"sourceSize": {"w":62,"h":15}
+},
+"gun.png":
+{
+	"frame": {"x":62,"y":20,"w":29,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":14},
+	"sourceSize": {"w":29,"h":14}
+},
+"head.png":
+{
+	"frame": {"x":91,"y":20,"w":27,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":18},
+	"sourceSize": {"w":27,"h":18}
+},
+"machinegun.png":
+{
+	"frame": {"x":0,"y":38,"w":86,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":86,"h":27},
+	"sourceSize": {"w":86,"h":27}
+},
+"separate bone.png":
+{
+	"frame": {"x":86,"y":38,"w":21,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":7},
+	"sourceSize": {"w":21,"h":7}
+},
+"shotgun.png":
+{
+	"frame": {"x":0,"y":65,"w":36,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":16},
+	"sourceSize": {"w":36,"h":16}
+},
+"skeleton.png":
+{
+	"frame": {"x":36,"y":65,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "spritesheet.png",
+	"format": "RGBA8888",
+	"size": {"w":118,"h":129},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4c198270a50abb6fed6ce0f8a7dd4b6a:391dc9dee4d38ddbdf5d13a50d5d5e44:729adc6043343cfda41c447ce8f464d6$"
+}
+}

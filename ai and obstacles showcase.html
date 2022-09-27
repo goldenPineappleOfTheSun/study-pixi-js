@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png" />
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background: #3d2b20;   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {   
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            width: 100vw;
+            background: #e28a4f;  
+        }
+
+        .debugs {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .debug {
+            position: absolute;
+            background: red;
+            opacity: 0.5;
+            z-index: 10;
+        }
+
+        .objects-bg {
+            position: absolute;
+            display:none;
+            z-index:-2;
+            left: 50vw;
+            top: 50vh;
+            transform: translate(-50%, -50%);
+        }
+
+        .paused {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #00000099;
+        }
+
+        .paused.is-shown {
+            display: block;
+        }
+
+        .paused > .text {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            color: white;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+
+        .game-over {
+            display: flex;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #00000099;  
+            opacity: 0;  
+            justify-content: center;
+        }
+
+        .game-over.is-shown {
+            opacity: 1;  
+        }
+
+        .game-over > .text {
+            position: absolute;
+            bottom: 200px;
+            color: #ffeb22;
+            font-family: sans-serif;
+            font-size: 30px;
+            transition: 1s ease-out;
+            opacity: 0;  
+        }
+
+        .game-over.is-shown > .text {
+            bottom: 100px;
+            font-weight: bold;
+            opacity: 1;  
+        }
+        .sc-instr {
+            position: fixed;
+            color: white;
+            font-family: arial;
+            top: 20px;
+            left: 20px;
+        }
+
+        .links {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            color: #fff;
+        }
+
+        .links a {
+            color: white;
+        }
+
+        .links a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sc-instr">Press 'z'</div>
+
+    <div class="paused">
+        <div class="text">PAUSE ⏸︎</div>
+    </div>
+
+    <div class="game-over">
+        <div class="text">Game Over</div>
+    </div>
+
+    <div class="links">
+        test scenes: 
+        <a href="/">S0</a>
+        <a href="/s1">physics</a>
+        <a href="/s2">junk physics</a>
+        <a href="/s3">linecast</a>
+        <a href="/s4">ai 1</a>
+        <a href="/s5">ai 2</a>
+    </div>
+
+    <div class="container">
+        <img class="objects-bg" src="images/objects bg.png" alt="">
+        <canvas class="main-canvas"></canvas>
+
+        <div class="debugs">
+            <div class="debug"></div>
+            <div class="debug"></div>
+            <div class="debug"></div>
+            <div class="debug"></div>
+            <div class="debug"></div>
+            <div class="debug"></div>
+            <div class="debug"></div>
+            <div class="debug"></div>
+            <div class="debug"></div>
+            <div class="debug"></div>
+        </div>
+    </div>
+    
+    <script src="https://pixijs.download/release/pixi.js"></script>
+    <script src="scripts/pixi-spine.umd.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/input.js"></script>
+    <script src="scripts/pool.js"></script>
+    <script src="scripts/stage.js"></script>
+    <script src="scripts/physics.js"></script>
+    <script src="scripts/family.js"></script>
+    <script src="scripts/filters.js"></script>
+    <script src="scripts/base.js"></script>
+    <script src="scripts/test scenes/linecast showcase blocks.js"></script>
+    <script src="scripts/test scenes/ai and obstacles showcase level.js"></script>
+    <script src="scripts/lowPolyStaticVision.js"></script>
+    <script src="scripts/junk.js"></script>
+    <script src="scripts/hero.js"></script>
+    <script src="scripts/skeleton.js"></script>
+    <script src="scripts/score.js"></script>
+    <script src="scripts/style.js"></script>
+    <script src="scripts/weapons.js"></script>
+    <script src="scripts/game.js"></script>
+
+    <script> 
+        onTexturesLoaded.push(() => {
+            const element = document.querySelector('.objects-bg');
+            element.style.display = 'block';
+            element.style.position = 'absolute';
+            element.style.width = `${app.screen.width}px`;
+            element.style.height = `${app.screen.height}px`;
+
+            const container = document.querySelector('.container');
+            container.style.height = `${app.screen.height}px`;
+
+            const canvas = document.querySelector('.main-canvas');
+            container.appendChild(canvas);
+
+            const debugs = document.querySelector('.debugs');
+            debugs.style.width = `${app.screen.width}px`;
+            debugs.style.height = `${app.screen.height}px`;
+        });
+
+        registerKeydown('Escape', () => {
+            document.querySelector('.paused').classList.toggle('is-shown');
+            paused = !paused;
+        });
+
+        function rollGameOver() {
+            document.querySelector('.game-over').classList.toggle('is-shown');
+            paused = false;
+            gameOver = true;
+        }
+    </script>
+
+</body>
+</html>

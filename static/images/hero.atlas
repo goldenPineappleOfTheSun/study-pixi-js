@@ -1,0 +1,62 @@
+
+hero.png
+size: 128,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hero rleg
+  rotate: false
+  xy: 46, 1
+  size: 13, 18
+  orig: 15, 20
+  offset: 1, 1
+  index: -1
+hero lleg
+  rotate: false
+  xy: 31, 1
+  size: 13, 18
+  orig: 15, 20
+  offset: 1, 1
+  index: -1
+hero r rarm
+  rotate: false
+  xy: 55, 21
+  size: 13, 15
+  orig: 13, 18
+  offset: 0, 1
+  index: -1
+hero pistol rarm
+  rotate: false
+  xy: 34, 51
+  size: 22, 11
+  orig: 24, 13
+  offset: 1, 1
+  index: -1
+hero head
+  rotate: false
+  xy: 14, 36
+  size: 18, 14
+  orig: 20, 15
+  offset: 1, 0
+  index: -1
+hero body
+  rotate: false
+  xy: 1, 1
+  size: 28, 33
+  orig: 30, 35
+  offset: 1, 1
+  index: -1
+hero p larm
+  rotate: false
+  xy: 1, 36
+  size: 11, 26
+  orig: 13, 28
+  offset: 1, 1
+  index: -1
+hero r larm
+  rotate: false
+  xy: 34, 36
+  size: 19, 13
+  orig: 21, 15
+  offset: 1, 1
+  index: -1
